@@ -1,0 +1,18 @@
+// app.get("/:publisher", function(req, res){
+//     dbComics.find({publisher: req.params.publisher}, function(err, foundComics){
+//         err ? console.log(err):
+//         console.log('showing ', req.params.publisher);
+//         var urlsFoundArr = [];
+//         foundComics.forEach(function(comics){
+//             request('http://www.previewsworld.com/Catalog/' + comics.diamond_id, function(error, response, body){
+//                 if(!error && response.statusCode == 200)
+//                 var urlString = body.match(/SiteImage\/CatalogImage\/S.............../g)[0].toString();
+//                 comics.image = urlString;
+//                 urlsFoundArr.push(urlString);
+//                 if(urlsFoundArr.length === foundComics.length){
+//                         res.render('publisherView', {foundComics: foundComics});
+//                 }
+//             });
+//         });
+//     });
+// });

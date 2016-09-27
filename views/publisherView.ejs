@@ -1,0 +1,28 @@
+<% include partials/header %>
+<div class="container">
+
+ 
+ 
+<div class='container'>
+<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+    <% foundComicsWithImg.forEach(function(comics){ %>
+     <div class="col-md-2 col-sm-6">
+            <a href="/:publisher/<%=comics._id%>"><div class="thumbnail">
+                <img src="<%= comics.image %>" + >
+                <div class="caption">
+                    <%= comics.title %></a>
+                    <a href="/<%=comics.publisher%>/<%=comics._id%>/save"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+
+<% }) %>
+</div>
+</div>
+</div>
+
+
+
+
+
+<% include partials/footer %>

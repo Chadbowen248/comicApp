@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+<h1>New Comics this week</h1>
+
+<div class="container">
+
+<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+    <% vault.forEach(function(comics){ %>
+     <div class="col-md-2 col-sm-6">
+            <a href="/vault/<%=comics._id%>"><div class="thumbnail">
+                <img src="<%= comics.image %>" + >
+                <div class="caption">
+                    <%= comics.title %></a>
+                   
+                </div>
+            </div>
+        </div>
+
+<% }) %>
+</div>
+</div>
+
+<% include partials/footer %>
